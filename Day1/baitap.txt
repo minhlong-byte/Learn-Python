@@ -1,0 +1,58 @@
+
+### Bài 1: Quản lý chi tiêu cơ bản
+
+**(Mức độ: Dễ)**
+
+* **Mô tả:** Đại ca đi siêu thị mua 3 món đồ. Hãy viết chương trình nhập vào giá tiền của 3 món đồ đó (trên 3 dòng khác nhau) và tính tổng số tiền cần thanh toán.
+* **Yêu cầu Input:** * Dòng 1: Giá món đồ thứ nhất.
+* Dòng 2: Giá món đồ thứ hai.
+* Dòng 3: Giá món đồ thứ ba.
+
+
+* **Yêu cầu Output:** In ra màn hình: `"Tổng số tiền đại ca cần thanh toán là: [Tổng tiền] VNĐ"`
+* **Kiến thức áp dụng:** `input()`, ép kiểu `int()`, phép cộng `+`.
+
+### Bài 2: Chuyển đổi nhiệt độ
+
+**(Mức độ: Dễ)**
+
+* **Mô tả:** Ứng dụng thời tiết thường cho phép đổi qua lại giữa độ C (Celsius) và độ F (Fahrenheit). Hãy viết chương trình nhập vào nhiệt độ tính bằng độ C và đổi nó sang độ F theo công thức: $F = \frac{9}{5} \times C + 32$.
+* **Yêu cầu Input:** Một số thực là nhiệt độ C.
+* **Yêu cầu Output:** In ra nhiệt độ F tương ứng, **được làm tròn 2 chữ số phần thập phân**. (Ví dụ: Nhập `36.5` -> In ra `97.70`).
+* **Kiến thức áp dụng:** Ép kiểu `float()`, phép nhân, phép chia, định dạng chuỗi in ra màn hình (`%.2f` hoặc `{:.2f}`).
+
+### Bài 3: Tính điểm trung bình môn học
+
+**(Mức độ: Trung bình)**
+
+* **Mô tả:** Hệ thống quản lý điểm cần tính điểm trung bình của 3 môn: Toán, Văn, Anh. Thay vì nhập từng môn trên một dòng, đại ca hãy nhập điểm của cả 3 môn trên **cùng một dòng**, phân cách nhau bởi dấu cách.
+* **Yêu cầu Input:** Một dòng duy nhất chứa 3 số thực tương ứng với điểm Toán, Văn, Anh.
+* **Yêu cầu Output:** In ra màn hình: `"Điểm trung bình 3 môn là: [ĐTB]"` (Làm tròn 1 chữ số thập phân).
+* **Kiến thức áp dụng:** Hàm `map()`, phương thức `split()` để tách chuỗi, phép tính trung bình cộng.
+
+### Bài 4: Chuyển đổi giây sang định dạng Giờ:Phút:Giây
+
+**(Mức độ: Trung bình - Khó)**
+
+* **Mô tả:** Một video trên Youtube hiển thị thời lượng bằng số giây tổng cộng. Hãy viết chương trình nhập vào số giây nguyên dương $S$ và chuyển đổi nó sang định dạng `Giờ:Phút:Giây`.
+* **Yêu cầu Input:** Một số nguyên dương $S$. (Ví dụ: `3665`)
+* **Yêu cầu Output:** Thời gian được định dạng lại. (Với `3665` -> In ra `1:1:5`).
+* **Kiến thức áp dụng:** * Sử dụng toán tử chia lấy nguyên `//` và chia lấy dư `%`.
+* Số giờ = $S // 3600$.
+* Số giây dư ra sau khi tính giờ = $S \% 3600$.
+* Tiếp tục lấy số giây dư đó để tính phút và giây cuối cùng.
+
+
+
+### Bài 5: Đảo ngược số nguyên 3 chữ số
+
+**(Mức độ: Khó)**
+
+* **Mô tả:** Hãy viết chương trình nhập vào một số nguyên dương có đúng 3 chữ số (ví dụ: `123`) và tạo ra một số mới là dạng đảo ngược của nó (ví dụ: `321`).
+* **Quy định:** Phải xử lý bằng **toán học**, tuyệt đối không dùng mẹo lật ngược chuỗi (string slicing `[::-1]`) vì bài này sinh ra để luyện tư duy logic toán học.
+* **Yêu cầu Input:** Một số nguyên dương $N$ có 3 chữ số.
+* **Yêu cầu Output:** Một số nguyên duy nhất là số đảo ngược của $N$.
+* **Kiến thức áp dụng:**
+* Dùng `% 10` để bóc lấy chữ số hàng đơn vị.
+* Dùng `// 10` và `% 10` để bóc chữ số hàng chục và hàng trăm.
+* Ghép lại thành số mới theo công thức: $M = \text{đơn vị} \times 100 + \text{chục} \times 10 + \text{trăm}$.
