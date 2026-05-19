@@ -44,7 +44,7 @@
 
 
 
-### Bài 5: Đảo ngược số nguyên 3 chữ số
+###Bài 5: Đảo ngược số nguyên 3 chữ số
 
 **(Mức độ: Khó)**
 
@@ -55,4 +55,173 @@
 * **Kiến thức áp dụng:**
 * Dùng `% 10` để bóc lấy chữ số hàng đơn vị.
 * Dùng `// 10` và `% 10` để bóc chữ số hàng chục và hàng trăm.
-* Ghép lại thành số mới theo công thức: $M = \text{đơn vị} \times 100 + \text{chục} \times 10 + \text{trăm}$.
+* Ghép lại thành số mới theo công thức: $M = \text{đơn vị} \times 100 + \text{chục} \times 10 + \text{trăm}$. 
+
+
+###Bài 6: Tính toán chỉ số khối cơ thể (BMI)
+
+(Mức độ: Dễ)
+
+* Mô tả:
+  Chỉ số BMI (Body Mass Index) được dùng để đánh giá tình trạng cơ thể gầy hay béo. Đại ca hãy viết chương trình yêu cầu nhập vào cân nặng và chiều cao của một người, sau đó tính toán chỉ số BMI theo công thức:
+
+BMI = Cân nặng / (Chiều cao * Chiều cao)
+
+* Yêu cầu Input:
+  Dòng 1: Nhập cân nặng tính bằng kg (số thực)
+
+Dòng 2: Nhập chiều cao tính bằng mét (số thực)
+
+* Yêu cầu Output:
+  In ra màn hình dòng chữ:
+
+"Chỉ số BMI của bạn là: [Giá trị BMI]"
+
+Kết quả được làm tròn đến 2 chữ số thập phân.
+
+* Kiến thức áp dụng:
+  Sử dụng input(), float(), phép chia /, phép nhân *, và định dạng số thập phân.
+
+###Bài 7: Bài toán Campuchia (Chia đều hóa đơn có tính tip)
+
+(Mức độ: Dễ - Trung bình)
+
+* Mô tả:
+  Đại ca cùng nhóm bạn đi ăn tại nhà hàng. Khi thanh toán, nhóm quyết định để lại một khoản tiền tip cho nhân viên phục vụ theo phần trăm của tổng hóa đơn, sau đó chia đều cho tất cả mọi người.
+
+* Yêu cầu Input:
+  Một dòng duy nhất chứa 3 số cách nhau bởi dấu cách:
+
+1. Tổng tiền hóa đơn ban đầu
+
+2. Phần trăm tiền tip
+
+3. Số lượng người trong nhóm
+
+* Yêu cầu Output:
+  In ra:
+
+"Mỗi người cần trả: [Số tiền]"
+
+Kết quả làm tròn đến 1 chữ số thập phân.
+
+Ví dụ:
+
+"Mỗi người cần trả: 155.5 VNĐ"
+
+* Gợi ý tính toán:
+
+Tiền tip = Hóa đơn * Phần trăm tip / 100
+
+Tổng tiền = Hóa đơn + Tiền tip
+
+Tiền mỗi người = Tổng tiền / Số người
+
+* Kiến thức áp dụng:
+  Dùng map(), split(), phép tính cơ bản và định dạng số thực.
+
+###Bài 8: Tính toán khoảng cách (Hệ tọa độ 1 chiều)
+
+(Mức độ: Trung bình)
+
+* Mô tả:
+  Trên một trục đường thẳng có hai chiếc xe đang đứng tại hai tọa độ x1 và x2. Đại ca hãy tính bình phương khoảng cách giữa hai chiếc xe này.
+
+* Yêu cầu Input:
+  Dòng 1: Tọa độ x1
+
+Dòng 2: Tọa độ x2
+
+* Yêu cầu Output:
+  In ra giá trị:
+
+(x1 - x2) * (x1 - x2)
+
+Ví dụ:
+
+Input:
+5
+-3
+
+Output:
+64.0
+
+* Kiến thức áp dụng:
+  Nhập xuất dữ liệu cơ bản, phép trừ, phép nhân, phép lũy thừa.
+
+###Bài 9: Chuyển đổi thời gian quy mô lớn
+
+(Mức độ: Trung bình - Khó)
+
+* Mô tả:
+  Cho một số nguyên dương N đại diện cho tổng số ngày. Hãy quy đổi thành:
+* Năm
+* Tuần
+* Ngày lẻ
+
+Quy ước:
+1 năm = 365 ngày
+
+* Yêu cầu Input:
+  Nhập một số nguyên dương N
+
+Ví dụ:
+800
+
+* Yêu cầu Output:
+
+"[Y] Năm, [W] Tuần, [D] Ngày lẻ"
+
+Ví dụ:
+
+"2 Năm, 10 Tuần, 0 Ngày lẻ"
+
+* Gợi ý:
+
+Năm = N // 365
+
+Ngày còn lại = N % 365
+
+Tuần = Ngày còn lại // 7
+
+Ngày lẻ = Ngày còn lại % 7
+
+* Kiến thức áp dụng:
+  Phép chia lấy nguyên // và chia lấy dư %.
+
+###Bài 10: Tráo đổi hai nửa của một mật mã
+
+(Mức độ: Khó)
+
+* Mô tả:
+  Cho một mật mã gồm đúng 4 chữ số. Hãy tráo đổi vị trí nửa đầu và nửa cuối của mật mã.
+
+Ví dụ:
+
+1234 -> 3412
+
+7592 -> 9275
+
+* Quy định:
+  Không được dùng chuỗi, slicing hay indexing.
+  Chỉ được dùng công thức toán học.
+
+* Yêu cầu Input:
+  Nhập một số nguyên dương có đúng 4 chữ số.
+
+* Yêu cầu Output:
+  In ra mật mã sau khi tráo đổi.
+
+* Gợi ý:
+
+Lấy 2 số đầu:
+Đầu = K // 100
+
+Lấy 2 số cuối:
+Cuối = K % 100
+
+Ghép lại:
+Kết quả = Cuối * 100 + Đầu
+
+* Kiến thức áp dụng:
+  Phép chia lấy nguyên //, chia lấy dư %, và phép nhân.
